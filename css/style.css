@@ -73,20 +73,19 @@ header {
     width: 100vw;
     display: flex;
     justify-content: space-between;
-    padding: 20px 20rem;
+    padding: 20px 18.5rem;
     z-index: 1000;
 }
 
 .logo {
-    width: max-content;
     position: relative;
+    display: flex;
 }
 
 .logo img {
-    position: absolute;
-    transform: translateX(-40px);
-    max-height: 40px;
-    width: 130px;
+    padding-top: 5px;
+    object-fit: cover;
+    width: 100px;
 }
 
 nav {
