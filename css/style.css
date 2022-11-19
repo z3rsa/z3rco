@@ -49,13 +49,19 @@ main {
     font-weight: 600;
 }
 
+.container {
+    max-width: 100%;
+    margin: 0 18rem;
+    height: 100%;
+}
+
 /* ========> Header <======== */
 header {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px 18.5rem;
+    padding: 20px 18rem;
     z-index: 1000;
     transition: all 1s;
 }
@@ -159,6 +165,7 @@ section#test {
 .hero {
     background-image: url(https://wallpaperaccess.com/full/3881687.jpg);
     background-size: cover;
+    background-position: center center;
     width: 100%;
     background-attachment: fixed;
     padding: 120px 0 0 0;
@@ -170,13 +177,7 @@ section#test {
     border: 2px solid yellow;
 }
 
-.container {
-    max-width: 100%;
-    margin: 0 18.5rem;
-    height: 100%;
-}
-
-.tagline {
+.hero .tagline {
     color: white;
     width: 450px;
     font-style: bold;
@@ -184,9 +185,10 @@ section#test {
     padding: 20vh 0 0 0;
 }
 
-.cta {
+.hero .cta {
     padding-top: 5vh;
     display: flex;
+    width: 100%;
     gap: 15px;
 }
 
@@ -236,7 +238,7 @@ section#test {
 .img_w_tagline>img {
     object-fit: cover;
     max-width: 100%;
-    width: 550px;
+    width: 100vw;
     height: 405px;
     background-position: center center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -251,7 +253,7 @@ section#test {
     padding-left: 20px;
     color: white;
     font-size: 34px;
-    width: 350px;
+    width: min(100% - 0%, 350px);
 }
 
 .item__desc {
@@ -261,7 +263,7 @@ section#test {
     display: flex;
     color: white;
     font-size: 14px;
-    width: 350px;
+    width: min(100% - 2%, 350px);
 }
 
 .gelap {
@@ -393,7 +395,7 @@ section#test {
 /* ========> Testimonials <======== */
 .testimonials {
     padding: 120px 0;
-    background: url(../img/bennett.jpg);
+    background: url(/img/bennett.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -493,11 +495,19 @@ section#test {
     gap: 10px;
     border: 1px solid white;
     font-size: 18px;
-    padding: 1rem 20px;
+    padding: 1rem 15px;
     color: white;
     border-radius: 999px;
     font-weight: 700;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.download .cta {
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
 }
 
 .button__cta__download:hover {
@@ -653,4 +663,94 @@ section#test {
 /* ========> Copyright <======== */
 #footer .copyright {
     text-align: center;
+}
+
+/* ========> Tab <======== */
+@media only screen and (max-width: 1200px) {
+    .container {
+        margin: 0 clamp(5vw, 100% - 95vw, 100%);
+    }
+
+    header {
+        padding: 20px clamp(5vw, 100% - 95vw, 100%);
+    }
+
+    .image__services {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .footer .info-1 {
+        margin-right: 10vw;
+    }
+
+}
+
+/* ========> Mobile <======== */
+@media only screen and (max-width: 600px) {
+
+    .container {
+        margin: 0 clamp(5vw, 100% - 95vw, 100%);
+    }
+
+    header {
+        padding: 20px clamp(5vw, 100% - 95vw, 100%);
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero .tagline {
+        font-size: 30px;
+    }
+
+    .hero .cta {
+        flex-direction: column;
+    }
+
+    .services .services__tagline {
+        font-size: 20px;
+    }
+
+    .image__services {
+        flex-direction: column;
+    }
+
+    .img_w_tagline>img {
+        height: 350px;
+    }
+
+    .item__desc {
+        font-size: 12px;
+    }
+
+    .testimonials__item {
+        gap: 20px;
+    }
+
+    .testimonials__tagline {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .download__tagline {
+        font-size: 18px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-1,
+    .info-2,
+    .info-3 {
+        width: 100%;
+    }
 }

@@ -92,20 +92,24 @@ const swiperTesti = new Swiper('.swiper-testi', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 40
         },
         480: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 60
         },
         640: {
-            slidesPerView: 3,
-            spaceBetween: 80
+            slidesPerView: 2,
+            spaceBetween: 60
         },
         992: {
-            slidesPerView: 3,
-            spaceBetween: 80
+            slidesPerView: 2,
+            spaceBetween: 60
+        },
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 60
         }
     }
 });
