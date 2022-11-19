@@ -110,6 +110,10 @@ const swiperTesti = new Swiper('.swiper-testi', {
         1200: {
             slidesPerView: 2,
             spaceBetween: 60
+        },
+        1920: {
+            slidesPerView: 3,
+            spaceBetween: 80
         }
     }
 });

@@ -395,7 +395,7 @@ section#test {
 /* ========> Testimonials <======== */
 .testimonials {
     padding: 120px 0;
-    background: url(/img/bennett.jpg);
+    background: url(../img/bennett.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
